@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlDate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ControlDate</h1>
+        <div class="tabs">
+            <button class="tab-button" onclick="openTab('add')">Adicionar Empresa</button>
+            <button class="tab-button" onclick="openTab('update')">Atualizar Empresa</button>
+            <button class="tab-button" onclick="openTab('delete')">Deletar Empresa</button>
+        </div>
+
+
+        <div id="add" class="tab-content">
+            <h2>Adicionar Empresa</h2>
+            <form id="addEmpresaForm">
+                <label for="addEmpresa">ID da Empresa:</label>
+                <input type="text" id="addEmpresa" placeholder="Ex: 01" name="idempresa" required>
+               
+                <label for="addNome">Nome:</label>
+                <input type="text" id="addNome" placeholder="Ex: Supermercados USCS" name="nome" required>
+               
+                <label for="addcnpj">CNPJ:</label>
+                <input type="text" id="addcnpj" placeholder="Ex: 123456789/6555" name="CNPJ" required>
+
+
+                <label for="addContato">Contato:</label>
+                <input type="text" id="addContato" placeholder="Ex: 1199114-5586" name="contato" required>
+               
+                <button type="submit">Adicionar Empresa</button>
+            </form>
+            <p id="addResult"></p>
+        </div>
+
+
+        <div id="update" class="tab-content">
+            <h2>Atualizar Empresa</h2>
+            <form id="updateEmpresaForm">
+                <label for="updateIdempresa">ID da Empresa:</label>
+                <input type="text" id="updateIDempresa" placeholder="Ex: 01" name="idempresa" required>
+               
+                <label for="updateNome">Nome:</label>
+                <input type="text" id="updateNome" placeholder="Ex: Supermercados USCS" name="nome" required>
+               
+                <label for="updateCNPJ">CNPJ:</label>
+                <input type="text" id="updateCNPJ" placeholder="Ex: 123456789/6565" name="CNPJ" required>
+
+
+                <label for="updateContato">Contato:</label>
+                <input type="text" id="updateContato" placeholder="Ex: 112233-4455" name="Contato" required>
+               
+                <button type="submit">Atualizar Empresa</button>
+            </form>
+            <p id="updateResult"></p>
+        </div>
+
+
+        <div id="delete" class="tab-content">
+            <h2>Deletar Empresa</h2>
+            <form id="deleteEmpresaForm">
+                <label for="deleteidempresa">ID da Empresa:</label>
+                <input type="text" id="deleteidempresa" placeholder="Ex: 01" name="idempresa" required>
+               
+                <button type="submit">Deletar Empresa</button>
+            </form>
+            <p id="deleteResult"></p>
+        </div>
+        <script src="script.js"></script>
+</body>
+</html>
